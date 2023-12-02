@@ -29,8 +29,10 @@ import com.varabyte.kobweb.compose.ui.modifiers.width
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.silk.components.graphics.Image
+import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
 import org.carlosjgr7.blogweb.models.Theme
+import org.carlosjgr7.blogweb.styles.LoginInputStyle
 import org.carlosjgr7.blogweb.util.Constans.FONT_FAMILY
 import org.carlosjgr7.blogweb.util.Res
 import org.jetbrains.compose.web.attributes.InputType
@@ -63,17 +65,13 @@ fun LoginScreen() {
             )
             Input(
                 type = InputType.Text,
-                attrs = Modifier
+                attrs = LoginInputStyle.toModifier()
                     .width(350.px)
                     .height(54.px)
                     .padding(leftRight = 20.px)
                     .margin(bottom = 6.px)
                     .backgroundColor(Color.white)
                     .fontFamily(FONT_FAMILY)
-                    .border(
-                        0.px,
-                        LineStyle.None,
-                    )
                     .outline(
                         style = LineStyle.None,
                     )
@@ -84,17 +82,13 @@ fun LoginScreen() {
 
             Input(
                 type = InputType.Password,
-                attrs = Modifier
+                attrs = LoginInputStyle.toModifier()
                     .width(350.px)
                     .height(54.px)
                     .padding(leftRight = 20.px)
                     .margin(bottom = 6.px)
                     .backgroundColor(Color.white)
                     .fontFamily(FONT_FAMILY)
-                    .border(
-                        0.px,
-                        LineStyle.None,
-                    )
                     .outline(
                         style = LineStyle.None,
                     )
@@ -112,7 +106,7 @@ fun LoginScreen() {
                     .border(style = LineStyle.None)
                     .fontWeight(FontWeight.Medium)
                     .fontFamily(FONT_FAMILY)
-                    .fontSize(16.px)
+                    .fontSize(14.px)
                     .margin(bottom = 24.px)
                     .toAttrs(),
             ) {

@@ -12,7 +12,7 @@ enum class Theme(
         rgb = rgb(r = 0, g = 162, b = 255),
     ),
     LightGray(
-        hex = "#FAFAFA",
-        rgb = rgb(r = 250, g = 250, b = 250),
+        hex = "#F5F5F5",
+        rgb = rgb(r = 245, g = 245, b = 245),
     ),
 }
